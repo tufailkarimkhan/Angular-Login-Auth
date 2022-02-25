@@ -1,0 +1,16 @@
+<div class="row self_row">
+    <div class="col-md-4 self_col" *ngFor="let product of allProducts">
+        <div class="card self_card">
+            <div class ="card-header text-center">
+              <h3 class="card-title">{{product.title}}</h3>  
+            </div>
+            <div class="card-body self_card_body"> 
+                <img class="image" src="https://picsum.photos/200/300" alt="productImage">
+            </div>
+            <div class="card-footer">
+                <h4 class="productName">{{product.productName}}</h4>
+                 <button class="byButton">By Product</button>
+            </div>
+        </div>
+    </div>
+</div>

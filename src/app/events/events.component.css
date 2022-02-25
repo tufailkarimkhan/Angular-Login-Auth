@@ -1,0 +1,51 @@
+.row {
+  padding: 0px;
+  margin: 0px;
+}
+.self_row {
+  padding-left: 0%;
+  padding-right: 2%;
+}
+.col-md-4 {
+  padding: 0px;
+}
+.self_col {
+}
+
+.self_card {
+  margin-top: 6%;
+  margin-left: 6%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.self_card:hover {
+  box-shadow: 3px 3px 15px rgb(41, 39, 39);
+  transition: 0.5s;
+}
+.card-body {
+  height: 0px;
+  width: 0px;
+}
+.self_card_body {
+  padding: 0px;
+  margin: 0px;
+  height: 30vh;
+  width: 41%;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+}
+.productName {
+  display: inline;
+}
+.byButton {
+  padding: 3px 5px;
+  margin-left: 15%;
+  height: 6vh;
+  border-radius: 25px;
+  border: 1px solid rgb(78, 148, 240);
+  background-color: rgb(78, 148, 240);
+  color: white;
+}
