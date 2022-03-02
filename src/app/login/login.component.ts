@@ -14,16 +14,20 @@ export class LoginComponent implements OnInit {
     email:'',
     password:''
   };
+
+   
   constructor(private authService:AuthService, private router:Router) { }
 
   ngOnInit(): void {
+  
   }
   loginUser(){
     return this.authService.loginUser(this.login)
     .subscribe(
         res => {
           console.log(res)
-          localStorage.setItem('token',res.toString())
+          
+          
           this.router.navigate(['/special'])
         },
         error => console.log(error)

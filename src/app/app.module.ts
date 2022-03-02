@@ -14,6 +14,7 @@ import { AuthService } from './auth.service';
 import { EventService } from './event.service';
 import { AuthGuard } from './auth/auth.guard';
 import {TokenInterceptorService} from './interceptor/token-interceptor.service'
+import { JwtHelperService } from '@auth0/angular-jwt';
 @NgModule({
   declarations: [
     AppComponent,
