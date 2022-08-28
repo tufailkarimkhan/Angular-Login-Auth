@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { SpecialEventsComponent } from './special-events/special-events.component';
+import {ReactiveFormComponent} from './reactive-form/reactive-form.component'
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'reactiveForm',
+    component: ReactiveFormComponent,
+    
   },
   {
     path: '**',

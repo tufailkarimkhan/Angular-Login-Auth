@@ -12,11 +12,14 @@ export class SpecialEventsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  message:any
+  
   addProduct(value:any){
     return this.eventService.Product(value)
     .subscribe(
-      res=> alert(res),
+      res=> {
+        alert(res)
+        value.reset()
+      },
       err=> console.log(err)
       
     )

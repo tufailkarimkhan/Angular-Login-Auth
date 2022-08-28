@@ -26,6 +26,12 @@
             >Add Product</a
           >
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reactiveForm" routerLinkActive="active"
+            >Reactive Form</a
+          >
+        </li>
       </ul>
       <ul class="navbar-nav">
         <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/login" routerLinkActive="active">Login</a>

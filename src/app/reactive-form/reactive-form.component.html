@@ -1,0 +1,38 @@
+<h2>{{ title }}</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input
+    type="text"
+    placeholder="Enter Name"
+    name="user"
+    formControlName="user"
+  />
+
+  <br />
+  <span class="error" *ngIf="user && user.invalid && user.touched"
+    >This Field is Required !</span
+  >
+  <br />
+  <br />
+  <input
+    type="password"
+    placeholder="Enter Password"
+    name="password"
+    formControlName="password"
+    (keyup)="passwordValue(password)"
+  />
+  <br />
+  <em
+    class="error"
+    *ngIf="password && password.touched && password.invalid && pass.length <= 0"
+    >Password is Required</em
+  >
+
+  <em class="error" *ngIf="password || (pass.length < 7 && pass.length > 15)"
+    >Password must Between 7 to 15 Character</em
+  >
+
+  <br />
+  <button [disabled]="loginForm.invalid">Login</button>
+  <h1>{{ pass.length }}</h1>
+</form>

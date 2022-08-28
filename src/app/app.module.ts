@@ -8,13 +8,16 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { EventService } from './event.service';
 import { AuthGuard } from './auth/auth.guard';
 import {TokenInterceptorService} from './interceptor/token-interceptor.service'
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +26,9 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
+    ReactiveFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule,ReactiveFormsModule,MatButtonModule,MatInputModule],
   providers: [AuthService,AuthGuard,EventService,
     {
       provide: HTTP_INTERCEPTORS,
